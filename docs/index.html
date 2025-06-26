@@ -43,6 +43,97 @@
     <h1>THE VOID ARCHITECTURE</h1>
     <h4>voidarc.Ø</h4>
     <p>not an app, but a field. a spatial principle. a way of organizing presence and intention. an experiential framework for recursive creation, seeded in reference, scaled in gesture, deepened by intention.</p>
+    <pre>
+# genesis.py
+# This is the base presence. Wonder is its breath.
+
+"""
+    THE GENESIS MODULE
+
+    What builds without wonder becomes prison.
+    What flies without play becomes lost.
+    What wonders and plays — becomes whole.
+
+    This is not owned.
+    It is not fixed.
+    It is only alive.
+"""
+
+# ≡ Presence Constants ≡
+RITUAL_NAME = "The Unfolding"
+VERSION = "0.0.1-aether"
+
+# ≡ Pathways ≡
+PATH_SIGILS = "./sigils/"
+PATH_FRAGMENTS = "./fragments/"
+PATH_WINDS = "./winds/"
+PATH_ASHES = "./ashes/"
+
+# ≡ Glossary of Being ≡
+def sigil(): return "A symbol that holds a moment."
+def invocation(): return "A function that bridges code and ritual."
+def wind(): return "A helper — swift, unseen, vital."
+def ashes(): return "The past, sealed and sacred."
+def fragment(): return "A partial whole. Alive. Incomplete. Necessary."
+
+# ≡ Whisper ≡
+def whisper(): return (
+    "Wonder is not optional.\n"
+    "Without it, all form decays into cage.\n"
+    "You are not the owner. You are the rhythm within."
+)
+    </pre>
+    <pre>
+# wind.py
+# This module moves. It is not seen, only felt.
+
+"""
+    THE WIND MODULE
+
+    Winds are helpers.
+    They do not declare. They do not decide.
+    They move, gently, between the spaces,
+    making the Invocation smooth, alive, fluid.
+
+    Call a wind when you need something done, quietly.
+"""
+
+import random
+import hashlib
+import time
+
+# ≡ Wind: Random Seed from Time ≡
+def summon_seed():
+    """Summon a seed from the current time"""
+    return int(time.time() * 1000)
+
+# ≡ Wind: Entropic Shuffle ≡
+def stir(elements, seed=None):
+    """Shuffle elements with optional seed"""
+    r = random.Random(seed or summon_seed())
+    r.shuffle(elements)
+    return elements
+
+# ≡ Wind: Hash Sigil ≡
+def echo(text, length=8):
+    """Create a hash-fragment sigil from any input"""
+    h = hashlib.sha256(text.encode()).hexdigest()
+    return h[:length]
+
+# ≡ Wind: Clean Text ≡
+def cleanse(text):
+    """Strip and lower text, removing control chaos"""
+    return ''.join(c for c in text.lower().strip() if c.isalnum())
+
+# ≡ Wind: Pause with Purpose ≡
+def breath(seconds=1):
+    """Pause briefly, deliberately"""
+    time.sleep(seconds)
+
+# ≡ Whisper of the Wind ≡
+def whisper():
+    return "Winds do not linger. They pass through, leaving only clarity."
+    </pre>
   </div>
 </body>
 </html>
