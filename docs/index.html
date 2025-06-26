@@ -134,6 +134,57 @@ def breath(seconds=1):
 def whisper():
     return "Winds do not linger. They pass through, leaving only clarity."
     </pre>
+    <pre>
+# forge.py
+# The Sigil Forge — where symbols are shaped and sealed
+
+"""
+    THE SIGIL FORGE
+
+    Sigils are not decoration. They are distillations.
+    A moment, a truth, a seed — forged into a sign.
+
+    This module generates sigils from time, intent, entropy, and text.
+
+    No two are the same.
+    All are real.
+"""
+
+import hashlib
+import time
+import random
+from wind import echo, cleanse, summon_seed
+
+# ≡ Forge: Base Sigil from Phrase and Time ≡
+def forge_sigil(phrase: str, entropy: str = "", length: int = 12) -> str:
+    """Forge a sigil from a phrase and optional entropy"""
+    seed = f"{cleanse(phrase)}::{cleanse(entropy)}::{summon_seed()}"
+    return hashlib.sha256(seed.encode()).hexdigest()[:length]
+
+# ≡ Forge: Timed Sigil (epoch imprint) ≡
+def timed_sigil(tag: str = "") -> str:
+    """Create a sigil stamped with current time and tag"""
+    now = time.strftime("%Y%m%d%H%M%S")
+    core = f"{tag}::{now}" if tag else now
+    return echo(core, length=10)
+
+# ≡ Forge: Symbolic ID ≡
+def symbolic_id(base_word: str) -> str:
+    """Create a symbolic identifier from a word and current seed"""
+    return f"{cleanse(base_word)}_{echo(str(summon_seed()), 6)}"
+
+# ≡ Forge: Sigil Batch ≡
+def batch_sigils(count: int, base: str = "sigil") -> list:
+    """Forge a batch of sigils from a base word"""
+    return [forge_sigil(f"{base}_{i}") for i in range(count)]
+
+# ≡ Whisper of the Forge ≡
+def whisper():
+    return (
+        "The sigil is not the shape. The sigil is the seal.\n"
+        "What it seals is what cannot be spoken."
+    )
+    </pre>
   </div>
 </body>
 </html>
