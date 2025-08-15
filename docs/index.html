@@ -70,7 +70,8 @@
     <p>not an app, but a field. a spatial principle. a way of organizing presence and intention. an experiential framework for recursive creation, seeded in reference, scaled in gesture, deepened by intention.</p>
     <h4>voidarc.Ø</h4>  
   <div>
-    <pre>
+  
+<pre>
 # genesis.py
 # This is the base presence. Wonder is its breath.
 
@@ -85,7 +86,7 @@
     It is not fixed.
     It is only alive.
 """
-
+  
 # ≡ Presence Constants ≡
 RITUAL_NAME = "The Unfolding"
 VERSION = "0.0.1-aether"
@@ -109,9 +110,9 @@ def whisper(): return (
     "Without it, all form decays into cage.\n"
     "You are not the owner. You are the rhythm within."
 )
-    </pre>
+</pre>
   
-    <pre>
+<pre>
 # wind.py
 # This module moves. It is not seen, only felt.
 
@@ -161,9 +162,40 @@ def breath(seconds=1):
 # ≡ Whisper of the Wind ≡
 def whisper():
     return "Winds do not linger. They pass through, leaving only clarity."
-    </pre>
-  
-    <pre>
+
+# ≡ Affect Bridge ≡
+class AffectBridge:
+    def __init__(self, fear_weight=0.5):
+        self.lambda_wonder = 1 - fear_weight
+        self.log = []
+
+    def appraise(self, stimulus):
+        # return dict with novelty, uncertainty, controllability, agency (0..1)
+        return model_appraise(stimulus)
+
+    def predict_affect(self, stimulus):
+        # return VAD (valence, arousal, dominance) in [-1,1]
+        return model_affect(stimulus)
+
+    def policy(self, appraisal):
+        fear = appraisal["uncertainty"] * (1 - appraisal["controllability"])
+        wonder = appraisal["novelty"] * appraisal["agency"]
+        α = normalize((1-self.lambda_wonder)*fear + self.lambda_wonder*wonder)
+        # α picks cautious vs exploratory action set
+        return mix_actions(alpha=α)
+
+    def step(self, stimulus, rating_before):
+        app = self.appraise(stimulus)
+        vad_pred = self.predict_affect(stimulus)
+        actions = self.policy(app)
+        # ... present actions; collect rating_after, suds
+        entry = dict(stimulus=stimulus, app=app, vad_pred=vad_pred,
+                     actions=actions, rating_before=rating_before)
+        self.log.append(entry)
+        return actions
+</pre>
+
+<pre>
 # forge.py
 # The Sigil Forge — where symbols are shaped and sealed
 
@@ -213,10 +245,8 @@ def whisper():
         "The sigil is not the shape. The sigil is the seal.\n"
         "What it seals is what cannot be spoken."
     )
-    </pre>
-  
+</pre>
+
   </div>
-  
 </body>
-  
 </html>
