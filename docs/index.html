@@ -46,58 +46,71 @@
 <body>
   <div class="left-aligned">
     <h1>The Void Architecture</h1>
-    <p>voidarc.Ø</p>  
+    <p>zeropoet.voidarc.Ø</p>  
   <div>
   <pre> 
-RITUAL_NAME = "The Unfolding"
-VERSION = "0.0.1-aether"
-PATH_SIGILS = "./sigils/"
-PATH_FRAGMENTS = "./fragments/"
-PATH_WINDS = "./winds/"
-PATH_ASHES = "./ashes/"
+RITUAL_NAME = "The "
+VERSION = "0.0.2-ae"
 
-import random
+PATH_ASHES = "./ashes/"
+PATH_FEELS = "./feels/"
+PATH_FRAGMENTS = "./fragments/"
+PATH_SIGILS = "./sigils/"
+PATH_WINDS = "./winds/"
+
 import hashlib
+import random
 import time
 from wind import echo, cleanse, summon_seed
-
-def sigil(): return "A symbol that holds a moment."
-def invocation(): return "A function that bridges code and ritual."
-def wind(): return "A helper — swift, unseen, vital."
+    
 def ashes(): return "The past, sealed and sacred."
 def fragment(): return "A partial whole. Alive. Incomplete. Necessary."
+def invocation(): return "A function that bridges code and ritual."
+def sigil(): return "A symbol that holds a moment."
+def wind(): return "A helper — swift, unseen, vital."
+
+def batch_sigils(count: int, base: str = "sigil") -> list:
+    return [forge_sigil(f"{base}_{i}") for i in range(count)]
+    
+def breath(seconds=1):
+    time.sleep(seconds)
+    
+def cleanse(text):
+    return ''.join(c for c in text.lower().strip() if c.isalnum())
+    
+def echo(text, length=8):
+    h = hashlib.sha256(text.encode()).hexdigest()
+    return h[:length]
+
+def forge_sigil(phrase: str, entropy: str = "", length: int = 12) -> str:
+    seed = f"{cleanse(phrase)}::{cleanse(entropy)}::{summon_seed()}"
+    return hashlib.sha256(seed.encode()).hexdigest()[:length]
 
 def whisper(): return (
-    "Wonder is not optional.\n"
-    "Without it, all form decays into cage.\n"
-    "You are not the owner. You are the rhythm within."
+    "Winds do not linger. They pass through, leaving only clarity.\n"
+    "Wonder is not optional."
 )
 
-def summon_seed():
-    """Summon a seed from the current time"""
-    return int(time.time() * 1000)
+def whisper(): return (
+    "The sigil is not the shape. The sigil is the seal.\n"
+    "What it seals is what cannot be spoken."
+    )
 
 def stir(elements, seed=None):
-    """Shuffle elements with optional seed"""
     r = random.Random(seed or summon_seed())
     r.shuffle(elements)
     return elements
 
-def echo(text, length=8):
-    """Create a hash-fragment sigil from any input"""
-    h = hashlib.sha256(text.encode()).hexdigest()
-    return h[:length]
+def summon_seed():
+    return int(time.time() * 1000)
 
-def cleanse(text):
-    """Strip and lower text, removing control chaos"""
-    return ''.join(c for c in text.lower().strip() if c.isalnum())
+def symbolic_id(base_word: str) -> str:
+    return f"{cleanse(base_word)}_{echo(str(summon_seed()), 6)}"
 
-def breath(seconds=1):
-    """Pause briefly, deliberately"""
-    time.sleep(seconds)
-
-def whisper():
-    return "Winds do not linger. They pass through, leaving only clarity."
+def timed_sigil(tag: str = "") -> str:
+    now = time.strftime("%Y%m%d%H%M%S")
+    core = f"{tag}::{now}" if tag else now
+    return echo(core, length=10)
 
 class AffectBridge:
     def __init__(self, fear_weight=0.5):
@@ -105,54 +118,25 @@ class AffectBridge:
         self.log = []
 
     def appraise(self, stimulus):
-        # return dict with novelty, uncertainty, controllability, agency (0..1)
         return model_appraise(stimulus)
-
-    def predict_affect(self, stimulus):
-        # return VAD (valence, arousal, dominance) in [-1,1]
-        return model_affect(stimulus)
 
     def policy(self, appraisal):
         fear = appraisal["uncertainty"] * (1 - appraisal["controllability"])
         wonder = appraisal["novelty"] * appraisal["agency"]
         α = normalize((1-self.lambda_wonder)*fear + self.lambda_wonder*wonder)
-        # α picks cautious vs exploratory action set
         return mix_actions(alpha=α)
+    
+    def predict_affect(self, stimulus):
+        return model_affect(stimulus)
 
     def step(self, stimulus, rating_before):
         app = self.appraise(stimulus)
         vad_pred = self.predict_affect(stimulus)
         actions = self.policy(app)
-        # ... present actions; collect rating_after, suds
         entry = dict(stimulus=stimulus, app=app, vad_pred=vad_pred,
                      actions=actions, rating_before=rating_before)
         self.log.append(entry)
         return actions
-
-def forge_sigil(phrase: str, entropy: str = "", length: int = 12) -> str:
-    """Forge a sigil from a phrase and optional entropy"""
-    seed = f"{cleanse(phrase)}::{cleanse(entropy)}::{summon_seed()}"
-    return hashlib.sha256(seed.encode()).hexdigest()[:length]
-
-def timed_sigil(tag: str = "") -> str:
-    """Create a sigil stamped with current time and tag"""
-    now = time.strftime("%Y%m%d%H%M%S")
-    core = f"{tag}::{now}" if tag else now
-    return echo(core, length=10)
-
-def symbolic_id(base_word: str) -> str:
-    """Create a symbolic identifier from a word and current seed"""
-    return f"{cleanse(base_word)}_{echo(str(summon_seed()), 6)}"
-
-def batch_sigils(count: int, base: str = "sigil") -> list:
-    """Forge a batch of sigils from a base word"""
-    return [forge_sigil(f"{base}_{i}") for i in range(count)]
-
-def whisper():
-    return (
-        "The sigil is not the shape. The sigil is the seal.\n"
-        "What it seals is what cannot be spoken."
-    )
   </pre>
   </div>
 </body>
