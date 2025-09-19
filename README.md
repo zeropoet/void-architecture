@@ -1,3 +1,3 @@
 # void architecture
 
-voidarc.Ø
+Ø
