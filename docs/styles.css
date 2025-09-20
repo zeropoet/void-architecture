@@ -17,10 +17,10 @@ a {
 
 a:hover {
   background-color: #000000;
-  color: #eeeeee;
+  color: #ffffff;
 }
 
 a:visited {
-  background-color: none;
+  background-color: #000000;
   color: #eeeeee;
 }
