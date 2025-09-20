@@ -20,10 +20,10 @@ a {
 
 a:hover {
   background-color: #111;
-  color: #black;
+  color: #000;
 }
 
 a:visited {
   background-color: none;
-  color: black;
+  color: #eee;
 }
