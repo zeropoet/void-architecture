@@ -12,16 +12,16 @@ p {
 a {
   background-color: none;
   text-decoration: none;
-  background-color: black;
-  color: white;
-}
-
-a:hover {
   background-color: white;
   color: black;
 }
 
-a:visited {
+a:hover {
   background-color: black;
   color: white;
+}
+
+a:visited {
+  background-color: white;
+  color: black;
 }
