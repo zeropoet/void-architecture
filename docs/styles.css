@@ -8,15 +8,22 @@ p {
   font-size: 20px;
   font-weight: bold;
   text-align: left;
-  color:white;
+  color: #eee;
   
 }
 
 a {
+  background-color: none;
   text-decoration: none;
+  color: #111;
 }
 
 a:hover {
   background-color: #111;
-  color: #eee;
+  color: #black;
+}
+
+a:visited {
+  background-color: none;
+  color: black;
 }
