@@ -1,5 +1,5 @@
 body {
-  background-color: #000;
+  background-color: #F2F2F2;
   padding: 20px;
 }
 
@@ -8,21 +8,20 @@ p {
   font-size: 20px;
   font-weight: 400;
   text-align: left;
-  color: #111;
 }
 
 a {
   background-color: none;
   text-decoration: none;
-  color: #eee;
+  color: #eeeeee;
 }
 
 a:hover {
   background-color: #222;
-  color: #000;
+  color: #eeeeee;
 }
 
 a:visited {
   background-color: none;
-  color: #eee;
+  color: #eeeeee;
 }
