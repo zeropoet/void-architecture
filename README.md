@@ -1,3 +1,3 @@
 # vøid architecture
 
-wool
+woolish

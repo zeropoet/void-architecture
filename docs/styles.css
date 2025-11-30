@@ -6,15 +6,15 @@ p {
   font-family: monospace;
   font-size: 18px;
   font-weight: 200;
-  color: black;
+  color: #000000;
 }
 
 a  {
   text-decoration: none;
-  color: white;
+  color: #ffffff;
 }
 
 a:hover {
     text-decoration: underline;
-    color: lightgrey;
+    color: #d3d3d3;
 }
