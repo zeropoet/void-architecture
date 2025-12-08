@@ -9,5 +9,5 @@ function draw() {
     } else {
         fill(255);
     }
-    rect(40, 0,20,20);
+    rect(40, 40,20,20);
 }
