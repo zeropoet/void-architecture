@@ -9,5 +9,6 @@ function draw() {
     } else {
         fill(255);
     }
-    rect(40, 40,20,20);
+    rect(0, 0,20,20);
+    ellipse(25,25,10,10);
 }
