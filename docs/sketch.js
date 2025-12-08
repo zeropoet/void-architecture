@@ -1,7 +1,8 @@
 function setup() {
- // put setup code here
+    createCanvas(600, 600);
 }
 
 function draw() {
-  // put drawing code here
+    noStroke();
+    rect(290, 0,20,20);
 }
