@@ -1,17 +1,17 @@
 body {
-  background-color: #F2F2F2;
+    background-color: #F2F2F2;
 }
 
 p {
-  font-family: monospace;
-  font-size: 18px;
-  font-weight: 200;
-  color: #000000;
+    font-family: monospace;
+    font-size: 18px;
+    font-weight: 200;
+    color: #000000;
 }
 
 a  {
-  text-decoration: none;
-  color: #d3d3d3;
+    text-decoration: none;
+    color: #d3d3d3;
 }
 
 a:hover {
