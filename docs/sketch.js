@@ -1,18 +1,12 @@
 let mover;
 let moverGravity;
-let moverA;
-let moverB;
 let m;
-
 
 function setup() {
     createCanvas(1454, 705);
     mover = new Mover();
     moverGravity = new Mover();
-    moverA = new Mover(700, 150, 1);
-    moverB = new Mover(400, 30, 1);
 }
-
 
 function draw() {
     background(225);
@@ -20,6 +14,15 @@ function draw() {
     mover.checkEdges();
     mover.update();
     mover.show();
+
+    if (mouseIsPressed) {
+        let gravity = createVector(0, -1);
+        moverGravity.applyForce(gravity);
+    }
+
+    moverGravity.checkEdges();
+    moverGravity.update();
+    moverGravity.show();
 
     let mouse = createVector(mouseX, mouseY);
     let center = createVector(width / 2, height / 2);
@@ -46,21 +49,12 @@ function draw() {
     }
     rect(-400/m, -233,10,-10);
     rect(1, 0,m-2,-1);
-
-    if (mouseIsPressed) {
-        let gravity = createVector(0, -1);
-        moverGravity.applyForce(gravity);
-    }
-    moverGravity.checkEdges();
-    moverGravity.update();
-    moverGravity.show();
 }
 
-
 class Mover {
-    constructor(x, y, mass) {
-        this.mass = mass;
-        this.position = createVector(x, y);
+    constructor() {
+        this.mass = 1;
+        this.position = createVector(700, 150);
         this.velocity = createVector(random(0,1), random(0,0));
         this.acceleration = createVector(0,0);
     }
@@ -83,7 +77,6 @@ class Mover {
         dir.mult(0.2);
         this.acceleration = dir;
         this.velocity.add(this.acceleration);
-        this.position.add(this.velocity);
     }
     show() {
         stroke(0);
@@ -105,5 +98,4 @@ class Mover {
             this.position.y = height;
         }
     }
-
 }
