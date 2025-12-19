@@ -1,5 +1,5 @@
 body {
-    background-color: #F2F2F2;
+    background-color: #e1e1e1;
 }
 
 p {
@@ -16,5 +16,6 @@ a  {
 
 a:hover {
     text-decoration: none;
+    background-color: #F2F2F2;
     color: #000000;
 }
