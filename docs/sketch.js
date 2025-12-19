@@ -19,7 +19,6 @@ function draw() {
         let gravity = createVector(0, -1);
         moverGravity.applyForce(gravity);
     }
-
     moverGravity.checkEdges();
     moverGravity.update();
     moverGravity.show();
@@ -81,7 +80,7 @@ class Mover {
     show() {
         stroke(0);
         strokeWeight(0);
-        fill(255,0,0);
+        fill(0);
         rect(this.position.x, this.position.y, 3, 3);
     }
     checkEdges() {
