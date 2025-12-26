@@ -16,12 +16,12 @@ p {
 
 a  {
     text-decoration: none;
-    background-color: #000000;
+    background-color: #F2F2F2;
     color: #d3d3d3;
 }
 
 a:hover {
     text-decoration: none;
-    background-color: #F2F2F2;
+    background-color: #000000;
     color: #000000;
 }
