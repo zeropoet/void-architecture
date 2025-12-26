@@ -2,6 +2,11 @@ body {
     background-color: #e1e1e1;
 }
 
+ul li {
+    display: inline-block;
+    margin-right: 50px;
+}
+
 p {
     font-family: monospace;
     font-size: 18px;
