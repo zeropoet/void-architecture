@@ -1,7 +1,3 @@
-let mover;
-let moverGravity;
-let m;
-
 function setup() {
     createCanvas(1454, 705);
     mover = new Mover();
