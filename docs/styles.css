@@ -3,8 +3,9 @@ body {
 }
 
 ul li {
-    display: inline-block;
+    display: block;
     margin-right: 50px;
+    margin-top:50px;
 }
 
 p {
