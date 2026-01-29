@@ -1,28 +1,27 @@
 body {
-    background-color: #e1e1e1;
+    background-color: #000000;
 }
 
 ul li {
-    display: block;
-    margin-right: 50px;
-    margin-top:50px;
+    display: inline-grid;
+    margin-right: 42px;
+    margin-top:0px;
 }
 
 p {
     font-family: monospace;
-    font-size: 18px;
-    font-weight: 200;
-    color: #000000;
+    font-size: 17px;
+    color: #ffffff;
 }
 
 a  {
     text-decoration: none;
-    background-color: #F2F2F2;
-    color: #d3d3d3;
+    background-color: none;
+    color: #e1e1e1;
 }
 
 a:hover {
     text-decoration: none;
-    background-color: #000000;
-    color: #000000;
+    background-color: none;
+    color: #ffffff;
 }
