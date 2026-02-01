@@ -3,9 +3,8 @@ body {
 }
 
 ul li {
-    display: inline-grid;
-    margin-right: 42px;
-    margin-top:0px;
+    display: inline;
+    margin: 30px;
 }
 
 p {
@@ -16,12 +15,10 @@ p {
 
 a  {
     text-decoration: none;
-    background-color: none;
-    color: #e1e1e1;
+    color: #777777;
 }
 
 a:hover {
     text-decoration: none;
-    background-color: none;
     color: #ffffff;
 }
