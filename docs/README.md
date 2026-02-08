@@ -1,3 +1,1 @@
-# Vøid Architecture
-
-
+# Void Architecture
