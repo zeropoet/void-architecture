@@ -1,3 +1,3 @@
 # Vøid Architecture
 
-🜂
+
