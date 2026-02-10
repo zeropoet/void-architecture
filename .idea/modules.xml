@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project version="4">
-  <component name="ProjectModuleManager">
-    <modules>
-      <module fileurl="file://$PROJECT_DIR$/../ovel/.idea/ovel.iml" filepath="$PROJECT_DIR$/../ovel/.idea/ovel.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/void-architecture.iml" filepath="$PROJECT_DIR$/.idea/void-architecture.iml" />
-    </modules>
-  </component>
-</project>
