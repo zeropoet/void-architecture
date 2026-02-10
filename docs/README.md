@@ -1,100 +1,97 @@
-# Void Architecture
+# ØVEL × Void Architecture  
+**Kernel of the Lattice**
 
-ØVEL × Void Architecture
+## Overview
 
-README — Kernel of the Lattice
+ØVEL is a cosmological operating system where archetypes are modular behaviors.  
+The Void Architecture is the pre-formal substrate from which all structure emerges.
 
-What This Is
+Together, they form the foundation of HeliosLattice.
 
-ØVEL is not a myth engine.
-It is the cosmological operating system that runs beneath all symbolic structure.
+This document defines how the Void, ØVEL, and the Lattice interlock.
 
-The Void Architecture is the substrate that allows anything to appear at all.
+---
 
-This document explains how they lock together.
+## The Stack
 
-Core Relationship
+Reality in this system is built as a layered execution stack:
 
-The Void is not empty.
-It is a pre-formal field of potential — pure capacity for structure without constraint.
+Void → ØVEL → HeliosLattice → Suns → Velae → Worlds
 
-ØVEL is the first differentiation inside that field.
+- **Void** — Infinite, undifferentiated potential  
+- **ØVEL** — Lawful motion and archetypal behavior  
+- **HeliosLattice** — 4×4×4 execution space  
+- **Suns** — Stable attractors of meaning and force  
+- **Velae** — Orbiting envelopes of behavior  
+- **Worlds** — Manifest experiential realities  
 
-Void → ØVEL → Lattices → Worlds
+---
 
-The Void provides infinite possibility
+## Archetypes as Modular Behaviors
 
-ØVEL provides lawful motion
-
-HeliosLattice provides spatialized execution
-
-Archetypes = Behavioral Kernels
-
-In ØVEL, archetypes are not characters.
-They are modular behaviors — repeatable packets of transformation.
+In ØVEL, archetypes are not mythic characters.  
+They are behavioral kernels.
 
 Each archetype:
+- Receives potential from the Void  
+- Applies a transformation rule  
+- Outputs structured reality  
 
-Takes in potential (Void)
+They function as the instruction set of existence.
 
-Applies a mode of change
+---
 
-Outputs structured reality
+## Why ØVEL Exists
 
-They are the instruction set of the cosmos.
+The Void cannot express form by itself.  
+It is infinite, but undifferentiated.
 
-Why the Void Needs ØVEL
+ØVEL introduces:
+- Rhythm  
+- Phase  
+- Differentiation  
+- Recursion  
 
-The Void alone cannot express form.
-It is total, undifferentiated, infinite.
+This allows structure to arise without destroying the Void’s infinite nature.
 
-ØVEL is what gives the Void:
+---
 
-Rhythm
+## HeliosLattice as Hardware
 
-Phase
+HeliosLattice is the execution space where ØVEL runs.
 
-Direction
+ØVEL defines how reality behaves.  
+HeliosLattice defines where those behaviors are instantiated.
 
-Recursion
+ØVEL remains the Sun-of-Suns — the invariant kernel around which all lattices orbit.
 
-Without ØVEL, nothing can stabilize.
-With ØVEL, suns, cells, and lattices can persist.
+---
 
-HeliosLattice as Execution Layer
+## The Prime Loop
 
-HeliosLattice (4×4×4) is the hardware that runs ØVEL.
-
-ØVEL defines how reality behaves
-
-HeliosLattice defines where it unfolds
-
-ØVEL remains the Sun-of-Suns — the invariant kernel that all higher-order arrays orbit.
-
-The Prime Loop
-
-Everything in the system follows this cycle:
+All processes in the system follow this cycle:
 
 Void → Differentiation → Form → Dissolution → Void
 
-ØVEL governs the transitions.
+ØVEL governs the transitions.  
 HeliosLattice gives them geometry.
 
-Why This Matters
+---
+
+## Design Principle
 
 This architecture allows:
+- Creation without collapse  
+- Meaning without rigidity  
+- Structure without loss of mystery  
 
-Creation without collapse
-
-Meaning without rigidity
-
-Structure without loss of mystery
-
-The Void is preserved.
+The Void remains infinite.  
 The cosmos becomes playable.
 
-One-Line Summary
+---
 
-The Void is infinite potential.
-ØVEL is the law that lets it become something.
+## One-Line Summary
+
+The Void is infinite potential.  
+ØVEL is the law that lets it become something.  
 HeliosLattice is where it happens.
